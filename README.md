@@ -9,8 +9,6 @@ You need [NODE](https://nodejs.org/en/download/) or something that can run JAVAS
 
 Get **serviceAccount** JSON file from *Project Setting > SERVICE ACCOUNTS* in Firebase Console
 
-Change the *databaseURL* when initializeApp with your own
-
 # Setting Up
 
 Download or clone this repository
@@ -34,12 +32,12 @@ Usage:
   export.js [OPTIONS] [ARGS]
 
 Options:
-  -d, --database URL     Database url
-  -f, --credentials [FILE]Credential file (Default is ./serviceAccountKey.json)
-  -c, --collection STRINGCollection name
-  -s, --subcollection STRINGSubcollection name
-  -e, --export [STRING]  Export file (Default is firebase-export.json)
-  -h, --help             Display help and usage details
+  -d, --database URL         Database url
+  -f, --credentials [FILE]   Credential file (Default is ./serviceAccountKey.json)
+  -c, --collection STRING    Collection name
+  -s, --subcollection STRING Subcollection name
+  -e, --export [STRING]      Export file (Default is firebase-export.json)
+  -h, --help                 Display help and usage details
 ```
 example:
 `node export.js --database='https://adatabase.firebaseio.com' --collection=collection_name --export=json_file.json`
@@ -51,5 +49,4 @@ This will import one collection to Firestore and it will overwrite your current 
 ```
 node import.js import-to-firestore.json
 ```
-
-*If you have any recommendation or question, please create an issue. Thanks,*
+**THIS IS A FORK. ISSUES SHOULD BE DIRECTED AT dalenguyen UNLESS THEY RELATE TO THE COMMAND LINE OPTIONS**
