@@ -27,11 +27,22 @@ npm install
 
 # Export database from Firestore
 
-This will help you create a backup of your collection and subcollection from Firestore to a JSON file name **firestore-export.json**
+This will help you create a backup of your collection and subcollection from Firestore to a JSON file.
 
 ```
-node export.js <your-collection-name> <sub-collection-name-(optional)>
+Usage:
+  export.js [OPTIONS] [ARGS]
+
+Options:
+  -d, --database URL     Database url
+  -f, --credentials [FILE]Credential file (Default is ./serviceAccountKey.json)
+  -c, --collection STRINGCollection name
+  -s, --subcollection STRINGSubcollection name
+  -e, --export [STRING]  Export file (Default is firebase-export.json)
+  -h, --help             Display help and usage details
 ```
+example:
+`node export.js --database='https://adatabase.firebaseio.com' --collection=collection_name --export=json_file.json`
 
 # Import database to Firestore
 
