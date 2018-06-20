@@ -7,7 +7,7 @@ var fileName = process.argv[2];
 // You should replae databaseURL with your own
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://ionic-firestore-dn.firebaseio.com"
+  databaseURL: "https://era-tweveq.firebaseio.com"
 });
 
 var db = admin.firestore();
